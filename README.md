@@ -204,11 +204,11 @@ static void on_socket_disconnected(rws_socket socket) {
   // forget about this socket object, due to next disconnection sequence
   _socket = NULL;
 }
-// socket连接，握手成功调用
+// socket连接，握手成功触发调用
 static void on_socket_connected(rws_socket socket) {
   printf("\nSocket connected");
 }
-// callback trigered on socket received text
+// 接收到文本信息时触发调用
 static void on_socket_received_text(rws_socket socket, const char * text, const unsigned int length) {
   printf("\nSocket text: %s", text);
 }
